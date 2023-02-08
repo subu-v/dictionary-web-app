@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/base/_base.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;EAGE;EACA;EACA","file":"main.07544d9b.css","sourceRoot":"../src","sourcesContent":["*,\n::before,\n::after {\n  box-sizing: inherit;\n  margin: 0;\n  padding: 0;\n}\n"]}

@@ -1,0 +1,25 @@
+{
+  "name": "dictionary-web-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Dictionary web app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subu-v/dictionary-web-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subu-v/dictionary-web-app/issues"
+  },
+  "homepage": "https://github.com/subu-v/dictionary-web-app#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.58.0"
+  }
+}
