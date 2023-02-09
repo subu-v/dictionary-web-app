@@ -2,18 +2,22 @@
 @use "abstracts" as *;
 
 .app {
-  padding: 6.4rem;
+  padding: 4.8rem 6.4rem;
 
   &__container {
-    width: 74rem;
+    width: 73.7rem;
     margin: 0 auto;
+  }
+
+  &__header {
+    margin-bottom: 3.2rem;
   }
   &__switcher-container {
     @include flex(row, space-between, center, 0);
     margin-bottom: 4.8rem;
   }
   &__logo {
-    width: 3.6rem;
+    width: 3.2rem;
     height: 3.6rem;
   }
 
@@ -22,7 +26,7 @@
   }
 
   &__font-switcher {
-    @include flex(row, center, center, 2rem);
+    @include flex(row, center, center, 1.6rem);
     cursor: pointer;
     position: relative;
     & > ul,
@@ -38,8 +42,8 @@
       position: absolute;
       top: -5px;
       right: -28px;
-      width: 2px;
-      height: 36px;
+      width: 1px;
+      height: 32px;
       background-color: rgb(233, 233, 233);
       box-shadow: 0 7.5px 7.5px rgba(0, 0, 0, 0.25);
     }
@@ -51,8 +55,11 @@
     translate: 0 7.5px;
   }
 
-  &__font-desc {
+  &__font-desc,
+  &__font-item {
     font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: var(--clr-text);
   }
 
   &__font-items-dropdown {
@@ -72,7 +79,6 @@
 
   &__font-item {
     cursor: pointer;
-    font-size: 1.8rem;
     transition: color 0.25s ease;
     &:not(:last-child) {
       margin-bottom: 1.8rem;
@@ -83,12 +89,12 @@
   }
 
   &__font-switcher-icon {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.2rem;
+    height: 0.6rem;
   }
 
   &__theme-switcher {
-    @include flex(row, center, center, 4.8rem);
+    @include flex(row, center, center, 3.6rem);
   }
 
   &__toggle-box {
@@ -104,8 +110,8 @@
     position: absolute;
     top: -3px;
     left: -12px;
-    width: 4.8rem;
-    height: 2.4rem;
+    width: 4rem;
+    height: 2rem;
 
     transition: background 0.25s ease;
 
@@ -118,16 +124,16 @@
       position: absolute;
       top: 2.5px;
       left: 3px;
-      width: 1.8rem;
-      height: 1.8rem;
+      width: 1.4rem;
+      height: 1.4rem;
       background-color: white;
       border-radius: 50%;
     }
   }
 
   &__theme-switcher-icon {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2rem;
+    height: 2rem;
     filter: drop-shadow(0.5px 3px 2px rgba(0, 0, 0, 0.35));
   }
 
@@ -154,8 +160,155 @@
 
     &::placeholder {
       color: rgb(131, 131, 131);
-      font-size: 1.8rem;
-      font-weight: 500;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 2.4rem;
     }
+  }
+
+  &__searched-container {
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #e9e9e9;
+      position: absolute;
+      bottom: -36px;
+      left: 0;
+    }
+  }
+  &__searched-word-container {
+    @include flex(row, space-between, center, 0);
+    margin-bottom: 4rem;
+  }
+  &__primary-heading {
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+    margin-bottom: 0.6rem;
+  }
+  &__pronounciation-desc {
+    font-size: 2.4rem;
+    color: var(--clr-primary);
+  }
+
+  &__audio-icon {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  &__noun-desc-container,
+  &__verb-desc-container {
+    position: relative;
+  }
+
+  &__secondary-heading {
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 2.4rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      right: 0;
+      width: 65.6rem;
+      height: 1px;
+      background-color: #e9e9e9;
+    }
+  }
+
+  &__heading-tertiary {
+    color: #757575;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+  }
+
+  &__word-meaning-list {
+    padding-left: 3.4rem;
+    margin-bottom: 4rem;
+  }
+  &__word-meaning {
+    color: var(--clr-text);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    padding-left: 1.8rem;
+    &::marker {
+      color: var(--clr-primary);
+    }
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__word-meaning-example {
+    color: #757575;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    margin-top: 1.6rem;
+  }
+  &__verb-desc-container > ul {
+    margin-bottom: 0px;
+  }
+
+  &__synonyms-box {
+    @include flex(row, initial, center, 2.4rem);
+    margin-bottom: 4rem;
+    & > h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__synonyms-desc {
+    &:link,
+    &:visited {
+      border-bottom: 1.5px solid transparent;
+      color: var(--clr-primary);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 2.42rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    &:hover {
+      border-bottom: 1.5px solid var(--clr-primary);
+    }
+  }
+
+  &__footer {
+    margin-top: 5rem;
+  }
+  &__footer,
+  &__footer-src-box {
+    @include flex(row, initial, center, 2.4rem);
+  }
+
+  &__footer-heading {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    color: #757575;
+  }
+  &__footer-src-box {
+    gap: 1.2rem;
+  }
+  &__footer-src-link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--clr-text);
+    }
+  }
+
+  &__footer-src-icon {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
