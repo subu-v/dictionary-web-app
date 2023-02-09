@@ -14,5 +14,115 @@
 
     <title>Frontend Mentor | Dictionary web app</title>
   </head>
-  <body></body>
+  <body>
+    <main class="app">
+      <div class="app__container">
+        <header class="app__header">
+          <div class="app__switcher-container">
+            <img
+              src="../assets/images/logo.svg"
+              alt="Dictionary Web app logo"
+              class="app__logo"
+            />
+            <div class="app__switchers">
+              <nav class="app__font-switcher">
+                <ul>
+                  <li class="app__font-desc">Sans Serif</li>
+                  <ul class="app__font-items-dropdown">
+                    <li class="app__font-item">Sans Serif</li>
+                    <li class="app__font-item">Serif</li>
+                    <li class="app__font-item">Mono</li>
+                  </ul>
+                </ul>
+                <img
+                  class="app__font-switcher-icon"
+                  src="../assets/images/icon-arrow-down.svg"
+                  alt="arrow down icon"
+                />
+              </nav>
+              <div class="app__theme-switcher">
+                <div class="app__toggle-box">
+                  <input type="checkbox" class="app__toggle-input" />
+                  <span class="app__toggle-slider"></span>
+                </div>
+                <div class="app__theme-switcher-icon-box">
+                  <img
+                    class="app__theme-switcher-icon"
+                    src="../assets/images/icon-moon.svg"
+                    alt="night mode moon icon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <input
+            type="text"
+            class="app__input"
+            placeholder="Search for any word..."
+            required
+          />
+        </header>
+        <div class="app__searched-container">
+          <div class="app__searched-word-container">
+            <div class="app__heading-box">
+              <h1 class="app__primary-heading">Keyword</h1>
+              <p class="app__prononciation-desc">/ˈkiːbɔːd/</p>
+            </div>
+            <div class="app__audio-file-container">
+              <img
+                class="app__audio-icon"
+                src="../assets/images/icon-play.svg"
+                alt="play audio img"
+              />
+            </div>
+          </div>
+          <div class="app__noun-desc-container">
+            <h2 class="app__secondary-heading">noun</h2>
+            <h3 class="app__heading-tertiary">meaning</h3>
+            <ul class="app__word-meaning-list">
+              <li class="app__word-meaning">
+                (etc.) A set of keys used to operate a typewriter, computer etc.
+              </li>
+              <li class="app__word-meaning">
+                A component of many instruments including the piano, organ, and
+                harpsichord consisting of usually black and white keys that
+                cause different tones to be produced when struck.
+              </li>
+              <li class="app__word-meaning">
+                A device with keys of a musical keyboard, used to control
+                electronic sound-producing devices which may be built into or
+                separate from the keyboard device.
+              </li>
+            </ul>
+            <div class="app__synonyms-box">
+              <h3 class="app__heading-tertiary">Synonyms</h3>
+              <a href="#" class="app__synonyms-desc">Electronic Keyboard</a>
+            </div>
+          </div>
+          <div class="app__verb-desc-container">
+            <h2 class="app__secondary-heading">Verb</h2>
+            <h3 class="app__heading-tertiary">meaning</h3>
+            <ul class="app__word-meaning-list">
+              <li class="app__word-meaning">
+                (etc.) A set of keys used to operate a typewriter, computer etc.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer class="app__footer">
+          <h4 class="app__footer-heading">Source</h4>
+          <div class="app__footer-src-box">
+            <a href="#" class="app__footer-src-link"
+              >https://en.wiktionary.org/wiki/keyboard</a
+            >
+            <img
+              class="app__footer-src-icon"
+              src="../assets/images/icon-new-window.svg"
+              alt="Open link in new window icon"
+            />
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>
