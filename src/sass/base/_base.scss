@@ -8,15 +8,43 @@
 
 html {
   font-size: 62.5%;
+  &:has(.dark-theme) .app__toggle-slider::after {
+    translate: 20px;
+  }
 }
 
 :root {
   --clr-primary: hsl(274, 82%, 60%);
+  --clr-body-bg: #ffffff;
+  --clr-toggle-bg: #757575;
+  --clr-dropdown-bg: #fff;
+  --clr-input-bg: #f4f4f4;
   --clr-text: #2d2d2d;
-  --clr-input-bg: #f4f4f4ff;
+  --clr-tertiary-heading: #757575;
+  --clr-example-text: #757575;
+  --clr-switchers-divider: #e9e9e9;
+  --clr-content-divider: #e9e9e9;
+  --clr-dropdown-shadow: rgba(0, 0, 0, 0.1);
+  --clr-moon-stroke: #838383;
+}
+
+.dark-theme {
+  --clr-primary: hsl(274, 82%, 60%);
+  --clr-body-bg: #050505;
+  --clr-toggle-bg: hsl(274, 82%, 60%);
+  --clr-dropdown-bg: #1f1f1f;
+  --clr-input-bg: #1f1f1f;
+  --clr-text: #fff;
+  --clr-tertiary-heading: #757575;
+  --clr-example-text: #757575;
+  --clr-switchers-divider: #e9e9e9;
+  --clr-content-divider: #3a3a3a;
+  --clr-dropdown-shadow: #a445ed;
+  --clr-moon-stroke: #a445ed;
 }
 
 body {
+  background-color: var(--clr-body-bg);
   box-sizing: border-box;
   font-family: sans-serif;
 }
