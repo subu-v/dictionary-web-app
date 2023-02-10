@@ -10,7 +10,7 @@
   }
 
   &__header {
-    margin-bottom: 3.2rem;
+    margin-bottom: 4.8rem;
   }
   &__switcher-container {
     @include flex(row, space-between, center, 0);
@@ -206,8 +206,9 @@
     font-size: 2.4rem;
     font-style: italic;
     font-weight: 700;
+    line-height: 2.9rem;
     color: var(--clr-text);
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
 
     &::after {
       content: "";
@@ -223,13 +224,14 @@
   &__heading-tertiary {
     color: #757575;
     font-size: 2rem;
+    line-height: 2.4rem;
     font-weight: 400;
     margin-bottom: 2.4rem;
   }
 
   &__word-meaning-list {
     padding-left: 3.4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6.4rem;
   }
   &__word-meaning {
     color: var(--clr-text);
@@ -241,7 +243,7 @@
       color: var(--clr-primary);
     }
     &:not(:last-child) {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.4rem;
     }
   }
 
