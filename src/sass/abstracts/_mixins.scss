@@ -5,3 +5,15 @@
   align-items: $align-items;
   gap: $gap;
 }
+
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == tablet) {
+    @media (max-width: 48em) {
+      @content;
+    }
+  } @else if($breakpoint == mobile) {
+    @media (max-width: 23.4375em) {
+      @content;
+    }
+  }
+}

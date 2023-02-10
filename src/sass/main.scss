@@ -2,23 +2,54 @@
 @use "abstracts" as *;
 
 .app {
-  padding: 4.8rem 6.4rem;
+  padding: 5.8rem 0;
 
+  @include responsive(mobile) {
+    padding: 2.4rem;
+  }
   &__container {
     width: 73.7rem;
     margin: 0 auto;
+
+    @include responsive(tablet) {
+      width: 68.9rem;
+    }
+
+    @include responsive(mobile) {
+      width: 32.7rem;
+    }
   }
 
   &__header {
-    margin-bottom: 4.8rem;
+    margin-bottom: 4.5rem;
+
+    @include responsive(tablet) {
+      margin-bottom: 4.3rem;
+    }
+
+    @include responsive(mobile) {
+      margin-bottom: 2.4rem;
+    }
   }
   &__switcher-container {
     @include flex(row, space-between, center, 0);
-    margin-bottom: 4.8rem;
+    margin-bottom: 5.2rem;
+
+    @include responsive(tablet) {
+      margin-bottom: 5.4rem;
+    }
+    @include responsive(mobile) {
+      margin-bottom: 2.4rem;
+    }
   }
   &__logo {
     width: 3.2rem;
     height: 3.6rem;
+
+    @include responsive(mobile) {
+      width: 2.8rem;
+      height: 3.2rem;
+    }
   }
 
   &__switchers {
@@ -60,6 +91,10 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: var(--clr-text);
+
+    @include responsive(mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   &__font-items-dropdown {
@@ -153,8 +188,11 @@
     cursor: pointer;
     caret-color: var(--clr-primary);
     font-size: 1.8rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    line-height: 2rem;
     outline: none;
-    padding: 2.4rem;
+    padding: 2.2rem 2.4rem 2.1rem;
     width: 100%;
     height: 6.4rem;
     transition: border 0.25s ease;
@@ -168,34 +206,69 @@
       font-size: 2rem;
       font-weight: 700;
       line-height: 2.4rem;
+
+      @include responsive(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.936rem;
+      }
+    }
+
+    @include responsive(tablet) {
+      padding: 2rem 2.4rem 2rem;
+    }
+    @include responsive(mobile) {
+      font-size: 1.6rem;
+      line-height: 1.936rem;
+      padding: 1.4rem 2.4rem 1.5rem;
     }
   }
 
   &__searched-container {
     position: relative;
+    padding-bottom: 4rem;
+    margin-bottom: 1.8rem;
+
+    @include responsive(mobile) {
+      padding-bottom: 3.2rem;
+      margin-bottom: 2.4rem;
+    }
     &::after {
       content: "";
       background-color: var(--clr-content-divider);
       width: 100%;
       height: 1px;
       position: absolute;
-      bottom: -36px;
+      bottom: 0;
       left: 0;
     }
   }
   &__searched-word-container {
     @include flex(row, space-between, center, 0);
-    margin-bottom: 4rem;
+    margin-bottom: 4.2rem;
+
+    @include responsive(mobile) {
+      margin-bottom: 3.2rem;
+    }
   }
   &__primary-heading {
     color: var(--clr-text);
     font-size: 6.4rem;
     line-height: 7.7rem;
     margin-bottom: 0.6rem;
+
+    @include responsive(mobile) {
+      font-size: 3.2rem;
+      line-height: 3.873rem;
+    }
   }
   &__pronounciation-desc {
     font-size: 2.4rem;
+    line-height: 2.905rem;
     color: var(--clr-primary);
+    @include responsive(mobile) {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
   }
 
   &__audio-icon {
@@ -214,6 +287,11 @@
       fill: #a445ed;
       opacity: 1;
     }
+
+    @include responsive(mobile) {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
   }
 
   &__noun-desc-container,
@@ -227,7 +305,13 @@
     font-weight: 700;
     line-height: 2.9rem;
     color: var(--clr-text);
-    margin-bottom: 3.2rem;
+    margin-bottom: 4rem;
+
+    @include responsive(mobile) {
+      font-size: 1.8rem;
+      line-height: 2.178rem;
+      margin-bottom: 3.2rem;
+    }
 
     &::after {
       content: "";
@@ -237,6 +321,10 @@
       width: 65.6rem;
       height: 1px;
       background-color: var(--clr-content-divider);
+
+      @include responsive(mobile) {
+        width: 26.6rem;
+      }
     }
   }
 
@@ -245,12 +333,23 @@
     font-size: 2rem;
     line-height: 2.4rem;
     font-weight: 400;
-    margin-bottom: 2.4rem;
+    margin-bottom: 2.5rem;
+
+    @include responsive(mobile) {
+      font-size: 1.6rem;
+      line-height: 1.936rem;
+      margin-bottom: 1.7rem;
+    }
   }
 
   &__word-meaning-list {
     padding-left: 3.4rem;
-    margin-bottom: 6.4rem;
+    margin-bottom: 4rem;
+
+    @include responsive(mobile) {
+      padding-left: 1.4rem;
+      margin-bottom: 2.4rem;
+    }
   }
   &__word-meaning {
     color: var(--clr-text);
@@ -258,11 +357,17 @@
     font-weight: 400;
     line-height: 2.4rem;
     padding-left: 1.8rem;
+
+    @include responsive(mobile) {
+      font-size: 1.5rem;
+      padding-left: 1rem;
+    }
+
     &::marker {
       color: var(--clr-primary);
     }
     &:not(:last-child) {
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.3rem;
     }
   }
 
@@ -271,7 +376,11 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
     font-weight: 400;
-    margin-top: 1.6rem;
+    margin-top: 1.3rem;
+
+    @include responsive(mobile) {
+      font-size: 1.5rem;
+    }
   }
   &__verb-desc-container > ul {
     margin-bottom: 0px;
@@ -295,6 +404,11 @@
       line-height: 2.42rem;
       text-decoration: none;
       transition: all 0.25s ease;
+
+      @include responsive(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.936rem;
+      }
     }
 
     &:hover {
@@ -303,28 +417,46 @@
   }
 
   &__footer {
-    margin-top: 5rem;
+    // margin-top: 5rem;
+    & > h4 {
+      text-decoration: underline;
+    }
   }
   &__footer,
   &__footer-src-box {
-    @include flex(row, initial, center, 2.4rem);
+    @include flex(row, initial, center, 2rem);
   }
 
+  &__footer {
+    @include responsive(mobile) {
+      display: block;
+    }
+  }
   &__footer-heading {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.7rem;
     color: var(--clr-tertiary-heading);
+
+    @include responsive(mobile) {
+      line-height: 1.694rem;
+      margin-bottom: 0.8rem;
+    }
   }
   &__footer-src-box {
-    gap: 1.2rem;
+    gap: 0.9rem;
   }
   &__footer-src-link {
     &:link,
     &:visited {
       font-size: 1.4rem;
       font-weight: 400;
+      line-height: 1.469rem;
       color: var(--clr-text);
+
+      @include responsive(mobile) {
+        line-height: 1.694rem;
+      }
     }
   }
 
