@@ -21,10 +21,10 @@
   }
 
   &__header {
-    margin-bottom: 4.5rem;
+    margin-bottom: 2.4rem;
 
     @include responsive(tablet) {
-      margin-bottom: 4.3rem;
+      margin-bottom: 2.3rem;
     }
 
     @include responsive(mobile) {
@@ -199,6 +199,7 @@
 
     outline: none;
     padding: 2.2rem 2.4rem 2.1rem;
+    margin: 0 0 0.8rem 0;
     width: 100%;
     height: 6.4rem;
 
@@ -230,6 +231,15 @@
     }
   }
 
+  &__input-empty-error {
+    color: #ff5252;
+    line-height: 2.42rem;
+    font-size: 2rem;
+    font-weight: 400;
+    visibility: hidden;
+    transition: all 0.2s ease;
+  }
+
   &__searched-container {
     position: relative;
     padding-bottom: 4rem;
@@ -257,7 +267,7 @@
       margin-bottom: 3.2rem;
     }
   }
-  &__primary-heading {
+  &__input-text {
     color: var(--clr-text);
     line-height: 7.7rem;
     font-size: 6.4rem;
@@ -269,7 +279,7 @@
       line-height: 3.873rem;
     }
   }
-  &__pronounciation-desc {
+  &__phonetic {
     font-size: 2.4rem;
     line-height: 2.905rem;
     font-weight: 400;
@@ -308,7 +318,7 @@
     position: relative;
   }
 
-  &__secondary-heading {
+  &__part-of-speech {
     font-size: 2.4rem;
     font-style: italic;
     font-weight: 700;
@@ -337,7 +347,8 @@
     }
   }
 
-  &__heading-tertiary {
+  &__meaning,
+  &__synonyms {
     color: var(--clr-tertiary-heading);
     line-height: 2.4rem;
     font-size: 2rem;
@@ -431,8 +442,7 @@
       text-decoration: underline;
     }
   }
-  &__footer,
-  &__footer-src-box {
+  &__footer {
     @include flex(row, initial, center, 2rem);
   }
 
@@ -452,10 +462,7 @@
       margin-bottom: 0.8rem;
     }
   }
-  &__footer-src-box {
-    gap: 0.9rem;
-  }
-  &__footer-src-link {
+  &__meaning-src-link {
     &:link,
     &:visited {
       line-height: 1.469rem;
@@ -469,8 +476,9 @@
     }
   }
 
-  &__footer-src-icon {
+  &__go-to-src-icon {
     width: 1.2rem;
     height: 1.2rem;
+    margin: 0 0 0 0.9rem;
   }
 }

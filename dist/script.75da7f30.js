@@ -118,11 +118,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"script.js":[function(require,module,exports) {
-var themeSwitcher = document.querySelector(".app__toggle-slider");
-var fontItemsDropdown = document.querySelector(".app__font-items-dropdown");
-var secondaryHeading = document.querySelector(".app__secondary-heading");
-var bodyElement = document.body;
+"use strict";
+
 // THEME SWITCHER
+var themeSwitcher = document.querySelector(".app__toggle-slider");
 themeSwitcher.addEventListener("click", function (e) {
   if (document.body.classList.contains("dark-theme")) {
     document.body.classList.remove("dark-theme");
@@ -132,19 +131,53 @@ themeSwitcher.addEventListener("click", function (e) {
 });
 
 // FONT-FAMILY SWITCHER
+var fontSwitcherText = document.querySelector(".app__font-desc");
+var fontItemsDropdown = document.querySelector(".app__font-items-dropdown");
+var partOfSpeechText = document.querySelector(".app__part-of-speech");
+var bodyElement = document.body;
 fontItemsDropdown.addEventListener("click", function (e) {
   if (e.target.textContent === "Sans Serif") {
+    fontSwitcherText.textContent = "Sans Serif";
     bodyElement.style.fontFamily = "sans-serif";
-    secondaryHeading.style.fontWeight = "700";
-    secondaryHeading.style.fontStyle = "italic";
+    partOfSpeechText.style.fontWeight = "700";
+    partOfSpeechText.style.fontStyle = "italic";
   } else if (e.target.textContent === "Serif") {
+    fontSwitcherText.textContent = "Serif";
     bodyElement.style.fontFamily = "lora";
-    secondaryHeading.style.fontWeight = "400";
-    secondaryHeading.style.fontStyle = "normal";
+    partOfSpeechText.style.fontWeight = "400";
+    partOfSpeechText.style.fontStyle = "normal";
   } else if (e.target.textContent === "Mono") {
+    fontSwitcherText.textContent = "Mono";
     bodyElement.style.fontFamily = "mono";
-    secondaryHeading.style.fontWeight = "400";
-    secondaryHeading.style.fontStyle = "normal";
+    partOfSpeechText.style.fontWeight = "400";
+    partOfSpeechText.style.fontStyle = "normal";
+  }
+});
+
+// FORM VALIDATION & FETCH DATA
+var inputElement = document.querySelector(".app__input");
+var inputErrorText = document.querySelector(".app__input-empty-error");
+var inputTextElement = document.querySelector(".app__input-text");
+var phoneticTextElement = document.querySelector(".app__phonetic");
+var meaningSrcLink = document.querySelector(".app__meaning-src-link");
+inputElement.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    if (this.value === "") {
+      this.style.borderColor = "#FF5252";
+      inputErrorText.style.visibility = "visible";
+    } else {
+      this.style.borderColor = "#A445ED";
+      inputErrorText.style.visibility = "hidden";
+    }
+    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/".concat(inputElement.value)).then(function (res) {
+      return res.json();
+    }).then(function (val) {
+      console.log(val);
+      inputTextElement.textContent = val[0].word;
+      phoneticTextElement.textContent = val[0].phonetic;
+      meaningSrcLink.setAttribute("href", val[0].sourceUrls[0]);
+      meaningSrcLink.textContent = val[0].sourceUrls[0];
+    });
   }
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

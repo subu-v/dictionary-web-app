@@ -71,12 +71,13 @@
             placeholder="Search for any word..."
             required
           />
+          <span class="app__input-empty-error">Whoops, can’t be empty…</span>
         </header>
         <div class="app__searched-container">
           <div class="app__searched-word-container">
             <div class="app__heading-box">
-              <h1 class="app__primary-heading">Keyboard</h1>
-              <p class="app__pronounciation-desc">/ˈkiːbɔːd/</p>
+              <h1 class="app__input-text">Keyboard</h1>
+              <p class="app__phonetic">/ˈkiːbɔːd/</p>
             </div>
             <div class="app__audio-file-container">
               <svg
@@ -94,8 +95,8 @@
             </div>
           </div>
           <div class="app__noun-desc-container">
-            <h2 class="app__secondary-heading">noun</h2>
-            <h3 class="app__heading-tertiary">Meaning</h3>
+            <h2 class="app__part-of-speech">noun</h2>
+            <h3 class="app__meaning">Meaning</h3>
             <ul class="app__word-meaning-list">
               <li class="app__word-meaning">
                 (etc.) A set of keys used to operate a typewriter, computer etc.
@@ -112,13 +113,13 @@
               </li>
             </ul>
             <div class="app__synonyms-box">
-              <h3 class="app__heading-tertiary">Synonyms</h3>
+              <h3 class="app__synonyms">Synonyms</h3>
               <a href="#" class="app__synonyms-desc">electronic Keyboard</a>
             </div>
           </div>
           <div class="app__verb-desc-container">
-            <h2 class="app__secondary-heading">Verb</h2>
-            <h3 class="app__heading-tertiary">meaning</h3>
+            <h2 class="app__part-of-speech">verb</h2>
+            <h3 class="app__meaning">Meaning</h3>
             <ul class="app__word-meaning-list">
               <li class="app__word-meaning">
                 To type on a computer keyboard.
@@ -131,15 +132,19 @@
         </div>
         <footer class="app__footer">
           <h4 class="app__footer-heading">Source</h4>
-          <div class="app__footer-src-box">
-            <a href="#" class="app__footer-src-link"
-              >https://en.wiktionary.org/wiki/keyboard</a
+          <div class="app__meaning-src-box">
+            <a
+              class="app__meaning-src-link"
+              href="https://en.wiktionary.org/wiki/keyboard"
+              target="_blank"
             >
-            <img
-              class="app__footer-src-icon"
-              src="../assets/images/icon-new-window.svg"
-              alt="Open link in new window icon"
-            />
+              https://en.wiktionary.org/wiki/keyboard
+              <img
+                class="app__go-to-src-icon"
+                src="../assets/images/icon-new-window.svg"
+                alt="Open link in new window icon"
+              />
+            </a>
           </div>
         </footer>
       </div>

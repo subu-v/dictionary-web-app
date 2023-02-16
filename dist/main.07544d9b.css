@@ -108,11 +108,11 @@ body {
   }
 }
 .app__header {
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.4rem;
 }
 @media (max-width: 48em) {
   .app__header {
-    margin-bottom: 4.3rem;
+    margin-bottom: 2.3rem;
   }
 }
 @media (max-width: 23.4375em) {
@@ -283,6 +283,7 @@ body {
   line-height: 2rem;
   outline: none;
   padding: 2.2rem 2.4rem 2.1rem;
+  margin: 0 0 0.8rem 0;
   width: 100%;
   height: 6.4rem;
   transition: border 0.25s ease;
@@ -313,6 +314,14 @@ body {
     line-height: 1.936rem;
     padding: 1.4rem 2.4rem 1.5rem;
   }
+}
+.app__input-empty-error {
+  color: #ff5252;
+  line-height: 2.42rem;
+  font-size: 2rem;
+  font-weight: 400;
+  visibility: hidden;
+  transition: all 0.2s ease;
 }
 .app__searched-container {
   position: relative;
@@ -347,7 +356,7 @@ body {
     margin-bottom: 3.2rem;
   }
 }
-.app__primary-heading {
+.app__input-text {
   color: var(--clr-text);
   line-height: 7.7rem;
   font-size: 6.4rem;
@@ -355,19 +364,19 @@ body {
   margin-bottom: 0.6rem;
 }
 @media (max-width: 23.4375em) {
-  .app__primary-heading {
+  .app__input-text {
     font-size: 3.2rem;
     line-height: 3.873rem;
   }
 }
-.app__pronounciation-desc {
+.app__phonetic {
   font-size: 2.4rem;
   line-height: 2.905rem;
   font-weight: 400;
   color: var(--clr-primary);
 }
 @media (max-width: 23.4375em) {
-  .app__pronounciation-desc {
+  .app__phonetic {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
@@ -395,7 +404,7 @@ body {
 .app__noun-desc-container, .app__verb-desc-container {
   position: relative;
 }
-.app__secondary-heading {
+.app__part-of-speech {
   font-size: 2.4rem;
   font-style: italic;
   font-weight: 700;
@@ -404,13 +413,13 @@ body {
   margin-bottom: 4rem;
 }
 @media (max-width: 23.4375em) {
-  .app__secondary-heading {
+  .app__part-of-speech {
     font-size: 1.8rem;
     line-height: 2.178rem;
     margin-bottom: 3.2rem;
   }
 }
-.app__secondary-heading::after {
+.app__part-of-speech::after {
   content: "";
   position: absolute;
   top: 14px;
@@ -420,11 +429,11 @@ body {
   background-color: var(--clr-content-divider);
 }
 @media (max-width: 23.4375em) {
-  .app__secondary-heading::after {
+  .app__part-of-speech::after {
     width: 26.6rem;
   }
 }
-.app__heading-tertiary {
+.app__meaning, .app__synonyms {
   color: var(--clr-tertiary-heading);
   line-height: 2.4rem;
   font-size: 2rem;
@@ -432,7 +441,7 @@ body {
   margin-bottom: 2.5rem;
 }
 @media (max-width: 23.4375em) {
-  .app__heading-tertiary {
+  .app__meaning, .app__synonyms {
     font-size: 1.6rem;
     line-height: 1.936rem;
     margin-bottom: 1.7rem;
@@ -514,7 +523,7 @@ body {
 .app__footer > h4 {
   text-decoration: underline;
 }
-.app__footer, .app__footer-src-box {
+.app__footer {
   display: flex;
   flex-direction: row;
   justify-content: initial;
@@ -538,23 +547,21 @@ body {
     margin-bottom: 0.8rem;
   }
 }
-.app__footer-src-box {
-  gap: 0.9rem;
-}
-.app__footer-src-link:link, .app__footer-src-link:visited {
+.app__meaning-src-link:link, .app__meaning-src-link:visited {
   line-height: 1.469rem;
   font-size: 1.4rem;
   font-weight: 400;
   color: var(--clr-text);
 }
 @media (max-width: 23.4375em) {
-  .app__footer-src-link:link, .app__footer-src-link:visited {
+  .app__meaning-src-link:link, .app__meaning-src-link:visited {
     line-height: 1.694rem;
   }
 }
-.app__footer-src-icon {
+.app__go-to-src-icon {
   width: 1.2rem;
   height: 1.2rem;
+  margin: 0 0 0 0.9rem;
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */
