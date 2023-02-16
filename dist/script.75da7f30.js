@@ -119,11 +119,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"script.js":[function(require,module,exports) {
 var themeSwitcher = document.querySelector(".app__toggle-slider");
+var fontItemsDropdown = document.querySelector(".app__font-items-dropdown");
+var secondaryHeading = document.querySelector(".app__secondary-heading");
+var bodyElement = document.body;
+// THEME SWITCHER
 themeSwitcher.addEventListener("click", function (e) {
   if (document.body.classList.contains("dark-theme")) {
     document.body.classList.remove("dark-theme");
   } else {
     document.body.classList.add("dark-theme");
+  }
+});
+
+// FONT-FAMILY SWITCHER
+fontItemsDropdown.addEventListener("click", function (e) {
+  if (e.target.textContent === "Sans Serif") {
+    bodyElement.style.fontFamily = "sans-serif";
+    secondaryHeading.style.fontWeight = "700";
+    secondaryHeading.style.fontStyle = "italic";
+  } else if (e.target.textContent === "Serif") {
+    bodyElement.style.fontFamily = "lora";
+    secondaryHeading.style.fontWeight = "400";
+    secondaryHeading.style.fontStyle = "normal";
+  } else if (e.target.textContent === "Mono") {
+    bodyElement.style.fontFamily = "mono";
+    secondaryHeading.style.fontWeight = "400";
+    secondaryHeading.style.fontStyle = "normal";
   }
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -151,7 +172,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49322" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54988" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

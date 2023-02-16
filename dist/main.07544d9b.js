@@ -172,7 +172,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../assets/images/icon-search.svg":[["icon-search.f68256e7.svg","../assets/images/icon-search.svg"],"../assets/images/icon-search.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../../assets/fonts/inter/static/Inter-Regular.ttf":[["Inter-Regular.2a701359.ttf","../assets/fonts/inter/static/Inter-Regular.ttf"],"../assets/fonts/inter/static/Inter-Regular.ttf"],"./../../assets/fonts/inter/static/Inter-Bold.ttf":[["Inter-Bold.f44d9087.ttf","../assets/fonts/inter/static/Inter-Bold.ttf"],"../assets/fonts/inter/static/Inter-Bold.ttf"],"./../../assets/fonts/lora/static/Lora-Regular.ttf":[["Lora-Regular.45a08a45.ttf","../assets/fonts/lora/static/Lora-Regular.ttf"],"../assets/fonts/lora/static/Lora-Regular.ttf"],"./../../assets/fonts/lora/static/Lora-Bold.ttf":[["Lora-Bold.3bdd87c7.ttf","../assets/fonts/lora/static/Lora-Bold.ttf"],"../assets/fonts/lora/static/Lora-Bold.ttf"],"./../../assets/fonts/inconsolata/static/Inconsolata-Regular.ttf":[["Inconsolata-Regular.8e5e028d.ttf","../assets/fonts/inconsolata/static/Inconsolata-Regular.ttf"],"../assets/fonts/inconsolata/static/Inconsolata-Regular.ttf"],"./../../assets/fonts/inconsolata/static/Inconsolata-Bold.ttf":[["Inconsolata-Bold.7169425d.ttf","../assets/fonts/inconsolata/static/Inconsolata-Bold.ttf"],"../assets/fonts/inconsolata/static/Inconsolata-Bold.ttf"],"./../../assets/images/icon-search.svg":[["icon-search.f68256e7.svg","../assets/images/icon-search.svg"],"../assets/images/icon-search.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49322" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54988" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -89,6 +89,7 @@
   &__font-desc,
   &__font-item {
     font-size: 1.8rem;
+    font-weight: 700;
     line-height: 2.4rem;
     color: var(--clr-text);
 
@@ -182,19 +183,25 @@
     background-image: url("../../assets/images/icon-search.svg");
     background-repeat: no-repeat;
     background-position: 97% 22px;
+
     border: 1.5px solid transparent;
     border-radius: 15px;
+
     color: var(--clr-text);
-    cursor: pointer;
     caret-color: var(--clr-primary);
+
+    cursor: pointer;
+
     font-size: 1.8rem;
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: inherit;
     line-height: 2rem;
+
     outline: none;
     padding: 2.2rem 2.4rem 2.1rem;
     width: 100%;
     height: 6.4rem;
+
     transition: border 0.25s ease;
 
     &:focus {
@@ -252,8 +259,9 @@
   }
   &__primary-heading {
     color: var(--clr-text);
-    font-size: 6.4rem;
     line-height: 7.7rem;
+    font-size: 6.4rem;
+    font-weight: 700;
     margin-bottom: 0.6rem;
 
     @include responsive(mobile) {
@@ -264,6 +272,7 @@
   &__pronounciation-desc {
     font-size: 2.4rem;
     line-height: 2.905rem;
+    font-weight: 400;
     color: var(--clr-primary);
     @include responsive(mobile) {
       font-size: 1.8rem;
@@ -330,8 +339,8 @@
 
   &__heading-tertiary {
     color: var(--clr-tertiary-heading);
-    font-size: 2rem;
     line-height: 2.4rem;
+    font-size: 2rem;
     font-weight: 400;
     margin-bottom: 2.5rem;
 
@@ -373,8 +382,8 @@
 
   &__word-meaning-example {
     color: var(--clr-example-text);
-    font-size: 1.8rem;
     line-height: 2.4rem;
+    font-size: 1.8rem;
     font-weight: 400;
     margin-top: 1.3rem;
 
@@ -399,9 +408,9 @@
     &:visited {
       border-bottom: 1.5px solid transparent;
       color: var(--clr-primary);
+      line-height: 2.42rem;
       font-size: 2rem;
       font-weight: 700;
-      line-height: 2.42rem;
       text-decoration: none;
       transition: all 0.25s ease;
 
@@ -433,10 +442,10 @@
     }
   }
   &__footer-heading {
+    color: var(--clr-tertiary-heading);
+    line-height: 1.7rem;
     font-size: 1.4rem;
     font-weight: 400;
-    line-height: 1.7rem;
-    color: var(--clr-tertiary-heading);
 
     @include responsive(mobile) {
       line-height: 1.694rem;
@@ -449,9 +458,9 @@
   &__footer-src-link {
     &:link,
     &:visited {
+      line-height: 1.469rem;
       font-size: 1.4rem;
       font-weight: 400;
-      line-height: 1.469rem;
       color: var(--clr-text);
 
       @include responsive(mobile) {
